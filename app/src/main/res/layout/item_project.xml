@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    app:cardCornerRadius="8dp">
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_project_icon_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            app:cardCornerRadius="8dp">
+
+
+            <ImageView
+                android:id="@+id/image_view_project_icon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/taken" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/text_view_project_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/card_view_project_icon_container"
+            android:layout_marginEnd="12dp"
+            android:layout_toEndOf="@id/card_view_project_icon_container"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="end"
+            android:textColor="#222222"
+            android:textSize="18sp"
+            tools:text="Movie Title" />
+
+        <TextView
+            android:id="@+id/text_view_project_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_view_project_title"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:layout_toEndOf="@id/card_view_project_icon_container"
+            android:fontFamily="sans-serif-light"
+            android:gravity="end"
+            android:textColor="#5A5A5A"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            tools:text="Director of movie in italics" />
+
+        <TextView
+            android:id="@+id/text_view_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="https://www.youtube.com/watch?v=XK9zL0ze9O4"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/text_view_wiki_movie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="https://en.wikipedia.org/wiki/Taken_(film)"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/text_view_wiki_director"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="https://en.wikipedia.org/wiki/Pierre_Morel"
+            android:visibility="invisible" />
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
